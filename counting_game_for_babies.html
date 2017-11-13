@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+	<title>Lets Count</title>
+
+
+	<link rel="apple-touch-icon" sizes="57x57" href="css/img/fav/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="css/img/fav/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="css/img/fav/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="css/img/fav/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="css/img/fav/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="css/img/fav/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="css/img/fav/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="css/img/fav/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="css/img/fav/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="css/img/fav/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="css/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="css/img/fav/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="css/img/fav/favicon-16x16.png">
+	<link rel="manifest" href="css/img/fav/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="css/img/fav/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="css/img/fav/favicon.ico">
+	<link rel="manifest" href="/assets/images/fav/manifest.json">
+	<meta name="msapplication-TileColor" content="#000">
+	<meta name="msapplication-TileImage" content="css/img/blue_clear.png">
+	<meta name="theme-color" content="#000">
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/count.js"></script>
+	<link rel="stylesheet" href="css/countTap.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div id="container">
+<div id="row">
+<div class="col-md-12 col-xs-12 col-sm-12 ">
+
+
+		<div id="demo "class="img_frame">
+	  	<div class="text_frame  img_color animated infinite pulse" id="demo" onmousedown="myFunction()"></div>
+		</div>
+
+
+		<div id="click2" class="clicker">
+			<img  src="css/img/blue_clear.png" class=" img_1 animated infinite pulse"  onclick="myFunction()" >
+		</div>
+		<div class="counted" >
+			<span id="clickCount2" class="number modak" onclick="myFunction()">0</span>
+		</div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+	<script>
+	function myFunction() {
+		var box = document.getElementById('demo'),
+			colors = ['#CCFFFF','#CCCCFF', '#CC99FF', '#CC66FF', '#CC00FF', '#6600FF' ,'#6633FF', '#6666FF', '#6699FF', '#66CCFF', '#66FFFF', '#ff60f7', '#fff600'];
+			// colors = ['#CCFFFF', '#66FFFF', '#ff60f7'];
+
+
+
+					// 	One click to loop and stop
+			    var set = colors.slice(5);
+			    (function loop(){
+			        var color = set.shift();
+			        box.style.backgroundColor = color;
+			        if (set.length) {
+			            setTimeout(loop, 10);
+			        }
+			    })();
+
+					// 	One click to loop, more clicks goes faster
+					// (function loop(){
+			    //     var color = colors.shift();
+			    //     box.style.backgroundColor = color;
+			    //     if (colors.length) {
+			    //         setTimeout(loop, 50);
+			    //     }
+			    // })();
+
+								// click for first color only
+					// (function (){
+			    //     var color = colors.shift();
+			    //     box.style.backgroundColor = color;
+			    // })();
+
+			}
+	</script>
+</body>
+</html>
